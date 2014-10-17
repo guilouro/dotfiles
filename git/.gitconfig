@@ -35,3 +35,5 @@
     active = shortlog --numbered --summary --email --no-merges --since="6 months"
 [core]
 	editor = vim
+[push]
+	default = simple
