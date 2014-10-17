@@ -19,19 +19,21 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 alias home='cd ~'
 
-# general
+#-- general
 alias cl='clear'
 alias celar='clear'
 alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 
-# django
+#-- django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
 
 
-### VirtualenvWrapper
-export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=~/PythonProjects
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-source /usr/local/bin/virtualenvwrapper.sh
+# VirtualenvWrapper
+if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
+	export WORKON_HOME=~/.virtualenvs
+	export PROJECT_HOME=~/PythonProjects
+	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+	source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 source ~/.bash_prompt
