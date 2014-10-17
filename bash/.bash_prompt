@@ -44,12 +44,7 @@ prompt_git() {
 
         fi;
 
-        # Get the short symbolic ref.
-        # If HEAD isn’t a symbolic ref, get the short SHA for the latest commit
-        # Otherwise, just give up.
-        branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
-            git rev-parse --short HEAD 2> /dev/null || \
-            echo '(unknown)')";
+        branchName="$(git branch | grep ^*|sed s/\*\ //)"
 
         [ -n "${s}" ] && s=" [${s}]";
 
@@ -136,6 +131,10 @@ function set_bash_prompt () {
 	PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
 	PS1+="\n";
 	PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+
+    # export PS1='$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo "\[\033[01;33m\] ($(git branch | grep ^*|sed s/\*\ //))\[\033[00m\]"; fi)'
+    # export PS1='\[\033[01;32m\]\u ➜  \[\033[01;31m\]\w\[\033[00m\]$(git branch &>/dev/null; if [ $? -eq 0 ]; then echo "\[\033[01;33m\] ($(git branch | grep ^*|sed s/\*\ //))\[\033[00m\]"; fi) $ '
+
 }
 
 # Tell bash to execute this function just before displaying its prompt.

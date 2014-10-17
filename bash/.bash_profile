@@ -28,9 +28,9 @@ alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
 
 
-# VIRTUALENVWRAPPER
+### VirtualenvWrapper
 export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=~/.virtualenvs
+export PROJECT_HOME=~/PythonProjects
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 source /usr/local/bin/virtualenvwrapper.sh
 
