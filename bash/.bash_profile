@@ -9,6 +9,7 @@ git init && \
 git add . && \
 git status && \
 git commit -m "Init"'
+alias myip='curl -s ip.dnsexit.com'
 
 #-- Navegation
 alias ..="cd .."
