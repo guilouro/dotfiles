@@ -20,14 +20,17 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 alias home='cd ~'
 
-#-- general
+#-- System
 alias cl='clear'
 alias celar='clear'
 alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 
-#-- django
+#-- Django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
 
+
+#-- Geral
+alias server='python -m SimpleHTTPServer'
 
 # VirtualenvWrapper
 if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
