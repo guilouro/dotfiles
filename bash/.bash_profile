@@ -20,10 +20,13 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 alias home='cd ~'
 
+
 #-- System
 alias cl='clear'
 alias celar='clear'
 alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
+alias size='du -h --max-depth=1'
+alias srcbash='source ~/.bashrc'
 
 #-- Django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
