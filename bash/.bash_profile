@@ -22,15 +22,19 @@ alias home='cd ~'
 
 
 #-- System
+alias ld='ll | grep "^d"'
 alias cl='clear'
 alias celar='clear'
 alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
 alias size='du -h --max-depth=1'
 alias srcbash='source ~/.bashrc'
 alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;'
+
 #-- Django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
 
+# install
+alias git-gen-serv='git clone https://github.com/guilouro/git-gen-serv.git . && sh install'
 
 #-- Geral
 alias server='python -m SimpleHTTPServer'
