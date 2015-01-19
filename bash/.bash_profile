@@ -1,5 +1,5 @@
 # Alias
-alias framework-startproject='git clone http://github.com/guilouro/boilerplate-framework-php.git . && 
+alias framework-startproject='git clone http://github.com/guilouro/boilerplate-framework-php.git . &&
 git clone http://github.com/guilouro/FRAMEWORK-PHP.git FRAMEWORK/ && \
 rm -rf .git && \
 rm -rf README.md && \
@@ -22,18 +22,18 @@ alias home='cd ~'
 
 
 #-- System
-alias ld='ll | grep "^d"'
+alias ld='ll | grep "^d"' ## List only directories
 alias cl='clear'
 alias celar='clear'
 alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
-alias size='du -h --max-depth=1'
-alias srcbash='source ~/.bashrc'
-alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;'
+alias size='du -h --max-depth=1' ## Size paths
+alias srcbash='source ~/.bashrc' ## Reload bash
+alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;' ## Remove all files .pyc
 
 #-- Django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
 
-# install
+# installs
 alias git-gen-serv='git clone https://github.com/guilouro/git-gen-serv.git . && sh install'
 
 #-- Geral
