@@ -1,40 +1,127 @@
 [user]
 	email = guilherme-louro@hotmail.com
 	name = Guilherme Louro
+
 [color]
     branch = auto
     diff = auto
     interactive = auto
     status = auto
     ui = true
+
 [color "status"]
     added = yellow
     changed = cyan
     untracked = red
+
+[color "branch"]
+
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+
+    meta = yellow bold
+    frag = magenta bold # line info
+    old = red # deletions
+    new = green # additions
+
 [alias]
     clean-tags=for-each-ref --format="%(refname:short)" refs/tags/* | xargs git tag -d && git fetch --tags
+
     st = status -sb
+
     ci = commit -m
+
     br = branch
+
+    # Show verbose output about tags, branches or remotes
+    bra = branch -a
+    remotes = remote -v
+    tags = tag -l
+
     df = diff
+
     lg = log -pgit ps
+
     co = checkout
+
     cm = checkout master
+
     fu = fetch upstream
+
     tree = log --graph --pretty=oneline --decorate
+
     pom = pull origin master
+
     ps = push
+
     pst = push --tags
+
     pl = pull
+
     pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
+
     amend = commit --amend -C HEAD
+
     ll   = log --pretty=oneline --decorate --abbrev-commit --max-count=15
+
     lll  = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
     rn = log -M
+
+    # List contributors with number of commits
     short = shortlog -s -n
+
     # Displays active users in the repository in the past 6 months
     active = shortlog --numbered --summary --email --no-merges --since="6 months"
+
+    # Commit all changes
+    ca = !git add -A && git commit -av
+
+    # :::: FINDS
+
+    # Find branches containing commit
+    fb = "!f() { git branch -a --contains $1; }; f"
+
+    # Find tags containing commit
+    ft = "!f() { git describe --always --contains $1; }; f"
+
+    # Find commits by source code
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+
+    # Find commits by commit message
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+    # Remove branches that have already been merged with master
+    # a.k.a. ‘delete merged’
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
 [core]
 	editor = vim
+
 [push]
 	default = simple
+
+# URL shorthands
+
+[url "git@github.com:"]
+
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+    insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+    insteadOf = "gist:"
