@@ -29,6 +29,7 @@ alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/
 alias size='du -h --max-depth=1' ## Size paths
 alias srcbash='source ~/.bashrc' ## Reload bash
 alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;' ## Remove all files .pyc
+alias deb='sudo dpkg -i '
 
 #-- Django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
