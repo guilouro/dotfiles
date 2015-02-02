@@ -37,6 +37,7 @@ alias mrs='manage runserver'
 alias mk='manage makemigrations'
 alias mm='manage migrate'
 alias msync='manage syncdb'
+alias mt='manage test'
 
 # installs
 alias git-gen-serv='git clone https://github.com/guilouro/git-gen-serv.git . && sh install'
