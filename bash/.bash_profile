@@ -36,6 +36,8 @@ alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
 alias mrs='manage runserver'
 alias mk='manage makemigrations'
 alias mm='manage migrate'
+alias msync='manage syncdb'
+alias mt='manage test'
 alias start-template='django-admin.py startproject --template https://github.com/guilouro/django-boilerplate/archive/master.zip' # Name # Local
 
 # installs
