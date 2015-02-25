@@ -39,12 +39,16 @@ alias mk='manage makemigrations'
 alias mm='manage migrate'
 alias msync='manage syncdb'
 alias mt='manage test'
+alias start-template='django-admin.py startproject --template https://github.com/guilouro/django-boilerplate/archive/master.zip' # Name # Local
 
 # installs
 alias git-gen-serv='git clone https://github.com/guilouro/git-gen-serv.git . && sh install'
 
 #-- Geral
 alias server='python -m SimpleHTTPServer'
+
+#-- Clones
+alias cl-grunt='git clone https://github.com/guilouro/grunt-workflow.git .'
 
 # VirtualenvWrapper
 if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
