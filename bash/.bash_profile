@@ -30,6 +30,7 @@ alias size='du -h --max-depth=1' ## Size paths
 alias srcbash='source ~/.bashrc' ## Reload bash
 alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;' ## Remove all files .pyc
 alias deb='sudo dpkg -i '
+alias tar='tar -zxvf '
 
 #-- Django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
