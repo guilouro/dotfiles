@@ -23,6 +23,7 @@ alias home='cd ~'
 
 #-- System
 alias ld='ll | grep "^d"' ## List only directories
+alias lh='ls -lah' ## size files
 alias cl='clear'
 alias celar='clear'
 alias stree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/   /" -e "s/-/|/"'
