@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source colors.sh
+
+DOTFILES="$HOME/dev/dotfiles"
+
+if [[ -d $DOTFILES ]]; then
+    msg_checking 'Checking dotfiles directory'
+else
+    msg_install 'Cloning dotfiles'
+    git clone https://github.com/guilouro/dotfiles.git $DOTFILES
+fi
+
+source bash/global.sh
+
+# sh git/global.sh
