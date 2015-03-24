@@ -11,6 +11,6 @@ else
     git clone https://github.com/guilouro/dotfiles.git $DOTFILES
 fi
 
-source $DOTFILES/bash/global.sh
+source "$DOTFILES/bash/global.sh"
 
 # sh git/global.sh
