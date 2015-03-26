@@ -11,6 +11,13 @@ else
     git clone https://github.com/guilouro/dotfiles.git $DOTFILES
 fi
 
-source "$DOTFILES/bash/global.sh"
+cd $DOTFILES
 
-# sh git/global.sh
+pwd
+
+source bash/global.sh
+
+source git/global.sh
+
+
+#curl -L https://raw.github.com/guilouro/dotfiles/master/install | bash
