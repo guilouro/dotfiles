@@ -26,7 +26,7 @@ if [ -f "$HOME/.bashrc" ]; then
 
     msg_update ".bashrc"
 
-    if grep -inr ".bash_profile" ~/.bashrc > /dev/null; then
+    if ! grep -inr ".bash_profile" ~/.bashrc > /dev/null; then
         echo 'source ~/.bash_profile' >> ~/.bashrc
         source ~/.bashrc
         msg_checking ".bashrc"
