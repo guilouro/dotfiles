@@ -1,3 +1,5 @@
+source colors.sh
+
 if [ -f "$HOME/.bash_profile" ]; then
     msg_update ".bash_profile"
     rm ~/.bash_profile
