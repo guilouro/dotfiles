@@ -30,5 +30,6 @@ if [ -f "$HOME/.bashrc" ]; then
         echo 'source ~/.bash_profile' >> ~/.bashrc
         source ~/.bashrc
         msg_checking ".bashrc"
+        msg_alert "For use on this session, type: source ~/.bashrc"
     fi
 fi
