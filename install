@@ -12,6 +12,7 @@ else
 fi
 
 cd $DOTFILES
+git pull origin master
 
 source bash/global.sh
 
