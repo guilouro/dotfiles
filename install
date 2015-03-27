@@ -13,11 +13,9 @@ fi
 
 cd $DOTFILES
 
-pwd
-
 source bash/global.sh
 
-# source git/global.sh
+source git/global.sh
 
 
 #curl -L https://raw.github.com/guilouro/dotfiles/master/install | bash
