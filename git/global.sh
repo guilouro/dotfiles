@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source colors.sh
 
 if [ -f "$HOME/.gitconfig" ]; then
