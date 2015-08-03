@@ -1,6 +1,6 @@
 # Alias
-alias framework-startproject='git clone http://github.com/guilouro/boilerplate-framework-php.git . &&
-git clone http://github.com/guilouro/FRAMEWORK-PHP.git FRAMEWORK/ && \
+alias framework-startproject='git clone http://github.com/guilouro/boilerplate-lothus-php.git . &&
+git clone http://github.com/guilouro/Lothus-PHP.git FRAMEWORK/ && \
 rm -rf .git && \
 rm -rf README.md && \
 rm -rf FRAMEWORK/.git && \
@@ -31,7 +31,6 @@ alias size='du -h --max-depth=1' ## Size paths
 alias srcbash='source ~/.bashrc' ## Reload bash
 alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;' ## Remove all files .pyc
 alias deb='sudo dpkg -i '
-alias tar='tar -zxvf '
 
 #-- Django
 alias manage='python `cat $VIRTUAL_ENV/.project`/manage.py'
@@ -60,3 +59,5 @@ if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
 fi
 
 source ~/.bash_prompt
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
