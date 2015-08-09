@@ -16,3 +16,5 @@ cd $DOTFILES
 source bash/global.sh
 
 source git/global.sh
+
+source sublime/global.sh
