@@ -10,8 +10,8 @@ if [ -d "$HOME/.config/sublime-text-3/Packages/User" ]; then
 
     sudo ln -s $DOTFILES/sublime/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User/Default\ \(Linux\).sublime-keymap
     sudo ln -s $DOTFILES/sublime/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-    msg_cheking "Sublime Key Map"
-    msg_cheking "Preferences Settings".
+    msg_checking "Sublime Key Map"
+    msg_checking "Preferences Settings".
 else
     msg_alert "Sublime Text not installed"
 fi
