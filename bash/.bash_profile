@@ -49,6 +49,7 @@ alias server='python -m SimpleHTTPServer'
 
 #-- Clones
 alias cl-grunt='git clone https://github.com/guilouro/grunt-workflow.git .'
+alias cl-gulp='git clone https://github.com/guilouro/gulp-boilerplate.git .'
 
 # VirtualenvWrapper
 if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
