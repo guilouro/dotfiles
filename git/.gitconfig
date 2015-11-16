@@ -123,3 +123,11 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
+
+[url "git@bitbucket.org:"]
+    insteadOf = "bt:"
+
+[branch]
+	autosetuprebase = always
+[merge]
+	ff = true
