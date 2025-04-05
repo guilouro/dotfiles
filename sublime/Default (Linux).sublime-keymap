@@ -1,4 +1,0 @@
-[
-	{ "keys": ["ctrl+;"], "command": "toggle_comment", "args": { "block": false } },
-	{ "keys": ["f12"], "command": "reindent"},
-]
